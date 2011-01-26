@@ -43,7 +43,8 @@ Geopastebin also has basic test coverage::
 Requirements
 ============
 
-* `Django`_ 1.2.X latest release or `1.2.X release branch`_
+* `Django`_ 1.2.4 or `1.2.X release branch`_. Older versions may work
+  but are untested.
 * `PostGIS`_
 * `psycopg2`_
 * `geojson`_
