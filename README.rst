@@ -8,9 +8,7 @@ WKT, EWKT, and GeoJSON.
 Getting started
 ===============
 
-To run the example project, make sure that ``geopastebin``, ``olwidget``,
-``geojson`` and ``django 1.2`` are on your ``PYTHONPATH`` and you have
-``PostGIS`` installed.
+To run the example project, make sure that you have the requirements below.
 
 Then::
 
@@ -42,6 +40,15 @@ Geopastebin also has basic test coverage::
 
     OK
 
+Requirements
+============
+
+* `Django`_ 1.2.X latest release or `1.2.X release branch`_
+* `PostGIS`_
+* `psycopg2`_
+* `geojson`_
+* `django-olwidget`_
+
 To Do
 =====
 
@@ -57,3 +64,10 @@ Known bugs
 
 * Does not support KML
 * Other formats to consider: NMEA, GML, GPX
+
+.. _Django: http://www.djangoproject.com/
+.. _1.2.X release branch: http://code.djangoproject.com/svn/django/branches/releases/1.2.X/
+.. _PostGIS: http://postgis.refractions.net/
+.. _psycopg2: http://pypi.python.org/pypi/psycopg2
+.. _geojson: http://pypi.python.org/pypi/geojson
+.. _django-olwidget: http://pypi.python.org/pypi/django-olwidget
