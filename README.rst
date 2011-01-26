@@ -46,6 +46,7 @@ Requirements
 * `Django`_ 1.2.4 or `1.2.X release branch`_. Older versions may work
   but are untested.
 * `PostGIS`_
+* `GDAL`_
 * `psycopg2`_
 * `geojson`_
 * `django-olwidget`_
@@ -69,6 +70,7 @@ Known bugs
 .. _Django: http://www.djangoproject.com/
 .. _1.2.X release branch: http://code.djangoproject.com/svn/django/branches/releases/1.2.X/
 .. _PostGIS: http://postgis.refractions.net/
+.. _GDAL: http://www.gdal.org/
 .. _psycopg2: http://pypi.python.org/pypi/psycopg2
 .. _geojson: http://pypi.python.org/pypi/geojson
 .. _django-olwidget: http://pypi.python.org/pypi/django-olwidget
