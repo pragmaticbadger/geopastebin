@@ -1,0 +1,67 @@
+{% extends "base.html" %}
+
+{% block title %}{{ object }} -{% endblock title %}
+
+{% block content %}
+<article class="content">
+  <header>
+    <h1>{{ object }}</h1>
+  </header>
+  {% if object.geom %}
+  <div id='map'></div>
+  <script type='text/javascript'>
+      new olwidget.InfoMap('map', [
+          ["{{ object.geometry.wkt }}", "{{ object.title }}"]
+      ],
+      {mapDivStyle : {width: '900px', height: '320px'}});
+  </script>
+  {% endif %}
+  <section class="original">
+    <header>
+      <hgroup>
+        <h1>Original Paste</h1>
+        <p>Posted {{ object.created|date }} ({{ object.created|timesince }} ago)</p>
+      </hgroup>
+    </header>
+    <div class="data"><pre>{{ object.paste }}</pre></div>
+  </section>
+  {% if object.geom %}
+
+  <section class="wkt">
+    <header>
+      <h1>As WKT</h1>
+    </header>
+    <textarea readonly="readonly" class="data">{{ object.geometry.wkt }}</textarea>
+  </section>
+
+  <section class="ewkt">
+    <header>
+      <h1>As Extended WKT</h1>
+    </header>
+    <textarea readonly="readonly" class="data">{{ object.geometry.ewkt }}</textarea>
+  </section>
+
+  <section class="geojson">
+    <header>
+      <h1>As GeoJSON</h1>
+    </header>
+    <textarea readonly="readonly" class="data">{{ object.geometry.json }}</textarea>
+  </section>
+
+  <section class="geojson">
+    <header>
+      <h1>As KML</h1>
+    </header>
+    <textarea readonly="readonly" class="data">{{ object.geometry.kml }}</textarea>
+  </section>
+  {% else %}
+  <section class="geojson">
+    <header>
+      <h1>Other formats</h1>
+    </header>
+    <p>We were unable to parse this paste as WKT, EWKT, GeoJSON or KML.</p>
+  </section>
+  {% endif %}
+
+</article>
+{% endblock %}

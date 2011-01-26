@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+
+{% block title %}Submit a new geopaste -{% endblock title %}
+
+{% block content %}
+<section class="content">
+<form action='.' method='post'>{% csrf_token %}
+{{ form.as_p }}
+<input type='submit' value='Paste'>
+</form>
+</section>
+{% endblock content %}

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        {% block fulltitle %}<title>{% block title %}{% endblock title %}Geopastebin</title>{% endblock fulltitle %}
+        <script type='text/javascript' src='http://openlayers.org/api/2.9/OpenLayers.js'></script>
+        <script type='text/javascript' src='http://openstreetmap.org/openlayers/OpenStreetMap.js'></script>
+        <script type='text/javascript' src='/static/olwidget/js/olwidget.js'></script>
+        <!--[if lt IE 9]>
+        <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+        <![endif]-->
+        <link rel='stylesheet' href='/static/css/less.css' />
+        <link rel='stylesheet' href='/static/css/base.css' />
+        <link rel='stylesheet' href='/static/olwidget/css/olwidget.css' />
+        <style type="text/css">
+        .data {
+          width: 50em;
+        }
+        </style>
+        <meta name="viewport" content="width=device-width; initial-scale=1"/> 
+        {% block extrahead %}{% endblock extrahead %}
+    </head>
+    <body>
+        {% block header %}
+        <header>
+          <h1 class="logo"><a href="/">Geopastebin</a></h1>
+        </header>
+        {% endblock header %}
+        {% block aside %}
+        <aside class="sidebar">
+          {% comment %}
+          <header>
+            <h1>More</h1>
+          </header>
+          {% endcomment %}
+          {% block nav %}
+          <nav class="main">
+            <ul>
+              <li><a href="/create/" class="navitem">New Geopaste</a></li>
+              <li><a href="/" class="navitem">Home</a></li>              
+              <li><a href="/about/" class="navitem">About</a></li>
+            </ul>
+          </nav>
+          {% endblock nav %}
+          {% block extra_aside %}{% endblock %}
+        </aside>
+        {% endblock aside %}
+        {% block content %}{% endblock content %}
+        {% block footer %}
+        <footer>
+          <p>A <a href="http://pragmaticbadger.com/">Pragmatic Badger</a> production powered by <a href="/about/#colophon">all kinds of good stuff</a>.</p>
+          <p class="small">Site Copyright {% now "Y" %} <a href="http://pragmaticbadger.com/">Pragmatic Badger</a> and released under a BSD license. Individual pastes are copyright their original authors.</p>
+          </footer>
+        {% endblock footer %}
+    </body>
+</html>

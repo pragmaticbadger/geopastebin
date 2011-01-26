@@ -1,0 +1,45 @@
+{% extends "base.html" %}
+
+{% block title %}About -{% endblock title %}
+
+{% block content %}
+<section class="content">
+  
+  <section id="about">
+    <header>
+      <h1>About Geopastebin</a>
+    </header>
+  
+    <p>Geopastebin aims to be a useful way to paste geographic information much like programmers and
+       designers paste code snippets that they want to talk about or ask questions about.  Geopastebin
+       currently supports the following Tex-based geographic formats:
+    </p>
+    <ul>
+      <li>Well Known Text (WKT)</li>
+      <li>Extended Well Known Text (EWKT)</li>
+      <li>Simple GeoJSON</li>
+    </ul>
+    <p>Support is in the works for GeoJSON with Features and FeatureCollections as well as KML.  Other formats
+       that would be nice to support include GPX, NMEA, and GML.<p>
+  </section>
+
+  <section id="colophon">
+    <header>
+      <h1>Colophon</a>
+    </header>
+
+    <p>Geopastebin is merely a thin layer of glue on top of lots of excellent open source projects:<p>
+    
+    <ul>
+      <li><a href="http://www.djangoproject.com/">Django</a> the web application framework written in <a href="http://python.org/">Python</a></li>
+      <li><a href="http://docs.djangoproject.com/en/1.2/ref/contrib/gis/">GeoDjango</a> a fantastic GIS development framework</li>
+      <li><a href="http://www.postgresql.org/">PostgreSQL</a> the database</li>
+      <li><a href="http://postgis.refractions.net/">PostGIS</a> spatially enabling PostgreSQL</li>
+      <li><a href="http://trac.osgeo.org/geos/">Geometry Engine, Open Source (GEOS)</a> used by both PostgreSQL and GeoDjango</li>
+      <li><a href="http://trac.osgeo.org/proj/">PROJ.4</a> for cartographic projections</li>
+      <li><a href="http://openlayers.org/">OpenLayers</a> and <a href="http://olwidget.org/">django-olwidget</a> for map display</li>
+    </ul>
+
+  </section>
+</section>
+{% endblock content %}

@@ -1,0 +1,4 @@
+psycopg2
+geojson
+django==1.2.X
+django-olwidget

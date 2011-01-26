@@ -1,0 +1,46 @@
+section h1, article h1, aside h1 {
+  font-size: 26px;
+  line-height: 36px;
+}
+
+header h1.logo a, section.paste header h1 a {
+    text-decoration: none;
+}
+
+header h1.logo a:visited, section.paste header h1 a:visited {
+    color: black;
+}
+
+header h1.logo a:hover, section.paste header h1 a:hover {
+    color: gray;
+}
+
+textarea.data {
+    width: 100%;
+    overflow: scroll;
+    overflow-y: scroll;
+}
+
+nav.main ul {
+    list-style-type: none;
+}
+
+a.navitem {
+    text-decoration: none;
+}
+
+a.navitem:visited, a.navitem:link {
+    color: black;
+}
+
+a.navitem:hover {
+    color: gray ;
+}
+
+label {
+    display: block;
+}
+
+footer {
+    padding-top: 2em;
+}

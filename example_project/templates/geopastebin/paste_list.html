@@ -1,0 +1,31 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<section class="content">
+  <header>
+    <p>{% if page_obj.has_previous %}<a href="?page={{ page_obj.previous_page_number }}">Newer pastes</a>{% endif %} {% if page_obj.has_next %}<a href="?page={{ page_obj.next_page_number }}">Older pastes</a>{% endif %}</p>
+  </header>
+{% for object in object_list %}
+  <section class="paste">
+    <section class="metadata">
+      <header>
+        <h1><a href="{{ object.get_absolute_url }}">{{ object }}</a>
+      </header>
+      <p>Posted {{ object.created|date }}</p>
+      {% if object.description %}<section>{{ object.description|linebreaks }}</section>{% endif %}
+    </section>
+    <div id='map-{{ object.uuid}}' class="list_map"></div>
+    {% if object.geom %}
+    <script type='text/javascript'>
+        new olwidget.InfoMap('map-{{ object.uuid }}', [
+            ["{{ object.geom.0.wkt }}", "{{ object.title }}"],
+        ],
+        {mapDivStyle : {width: '228px', height: '240px'}});
+    </script>
+    {% endif %}  
+  </section>
+{% endfor %}
+</section>
+
+{% endblock content %}
