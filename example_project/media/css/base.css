@@ -3,15 +3,15 @@ section h1, article h1, aside h1 {
   line-height: 36px;
 }
 
-header h1.logo a, section.paste header h1 a {
+header h1.logo a, hgroup h1.logo a, section.paste header h1 a {
     text-decoration: none;
 }
 
-header h1.logo a:visited, section.paste header h1 a:visited {
+header h1.logo a:visited, hgroup h1.logo a:visited, section.paste header h1 a:visited {
     color: black;
 }
 
-header h1.logo a:hover, section.paste header h1 a:hover {
+header h1.logo a:hover, hgroup h1.logo a:hover, section.paste header h1 a:hover {
     color: gray;
 }
 
