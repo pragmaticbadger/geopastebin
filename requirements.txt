@@ -1,4 +1,4 @@
 psycopg2
 geojson
-django==1.2.X
+django==1.2.4
 -e git+git://github.com/yourcelf/olwidget.git#egg=olwidget
