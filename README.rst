@@ -3,7 +3,7 @@ Geopastebin
 ===========
 
 A simple BSD-licensed Django application for sharing GIS-related pastes such as
-WKT, EWKT, and GeoJSON.
+WKT, EWKT, and GeoJSON.  See it in action at http://geopastebin.com/.
 
 Getting started
 ===============
