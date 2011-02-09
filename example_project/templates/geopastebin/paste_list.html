@@ -6,6 +6,12 @@
   <header>
     <p>{% if page_obj.has_previous %}<a href="?page={{ page_obj.previous_page_number }}">Newer pastes</a>{% endif %} {% if page_obj.has_next %}<a href="?page={{ page_obj.next_page_number }}">Older pastes</a>{% endif %}</p>
   </header>
+  <section class="form">
+  <form action='/create/' method='post'>{% csrf_token %}
+  {{ form.as_p }}
+  <input type='submit' value='Paste'>
+  </form>
+  </section>
 {% for object in object_list %}
   <section class="paste">
     <section class="metadata">
